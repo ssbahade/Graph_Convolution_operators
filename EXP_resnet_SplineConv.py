@@ -118,16 +118,6 @@ def test():
          transforms.Normalize((0.5,0.5,0.5), (0.5,0.5,0.5))]
         )
 
-    #Load train and test set:
-    '''train = torchvision.datasets.CIFAR10(root='./data_CIFAR',train=True,download=True,transform=transform)
-    trainset = torch.utils.data.DataLoader(train,batch_size=128,shuffle=True)
-
-    test = torchvision.datasets.CIFAR10(root='./data_CIFAR',train=True,download=True,transform=transform)
-    testset = torch.utils.data.DataLoader(test,batch_size=128,shuffle=False)'''
-
-    # with open("Data_after_pass through_graph.txt", 'rb') as pickleFile:
-    #     graph_data = pickle.load(pickleFile)
-
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print(device)
 
